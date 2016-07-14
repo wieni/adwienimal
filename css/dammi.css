@@ -1,0 +1,87 @@
+.dammi-button + .ajax-progress {
+    margin-left: -16px;
+}
+
+.dammi-form__container form {
+    height: 65vh;
+}
+
+ul.dammi-tabs {
+    background: #ebebeb;
+
+    width: calc(100% + 2em);
+    margin-left: -1em;
+    margin-top: -1em;
+    padding: 0 15px;
+
+    overflow: auto;
+}
+
+li.dammi-tabs__tab {
+    cursor: pointer;
+
+    float: left;
+    width: auto;
+    margin: 0 0 -1px;
+    padding: 7px 2em 7px 2em;
+}
+
+li.dammi-tabs__tab:hover {
+    text-decoration: underline;
+}
+
+li.dammi-tabs__tab.is-active {
+    background-color: #ffffff;
+}
+
+li.dammi-tabs__tab.is-active:hover {
+    background-color: #ffffff;
+
+    text-decoration: underline;
+}
+
+h3.dammi-title {
+    margin-top: 20px;
+}
+
+.dammi-button {
+    margin-left: 0;
+}
+
+.dammi-button.dammireset {
+    padding-left: 2.5em;
+}
+
+.dammi-button.dammireset::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 1em;
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/ex.svg);
+}
+
+.dammi-message {
+    margin: 10px 0;
+}
+
+.dammi-message.messages--info {
+    background-image: url(../images/questionmark-disc.svg);
+
+    border-color: #c0c0c0;
+}
+
+.dammi-results .results-image {
+    opacity: .8;
+    margin: 2px;
+
+    transition: opacity .2s ease-in-out;
+}
+
+.dammi-results .results-image:hover {
+    cursor: pointer;
+
+    opacity: 1;
+}

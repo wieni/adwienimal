@@ -1,0 +1,23 @@
+.is-hidden {
+    display: none;
+}
+
+.toolbar-icon-admin-toolbar-tools-help:before {
+    background-image: url(../images/wieni.svg);
+    background-size: 80% !important;
+
+    width: 20px !important;
+}
+
+
+.ajax-progress-throbber .throbber {
+    padding: 1px 6px 2px;
+}
+
+.ajax-new-content {
+    display: none !important;
+}
+
+div[id*="ajax-wrapper"] .messages--error:first-of-type:not(:last-of-type)  {
+    display: none;
+}

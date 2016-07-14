@@ -1,0 +1,6 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      css/adwienimal.css: {}
+      css/dammi.css: {}
