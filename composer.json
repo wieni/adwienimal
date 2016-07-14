@@ -1,0 +1,25 @@
+{
+    "name": "wieni/adwienimal",
+    "description": "Custom Drupal 8 admin Wieni theme based on Adminimal",
+    "license": "MIT",
+    "version": 0.1,
+    "authors": [
+        {
+            "name": "Wieni",
+            "email": "info@wieni.be"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packagist.drupal-composer.org/"
+        }
+    ],
+    "require": {
+        "drupal/adminimal_theme": "8.*",
+        "drupal/adminimal_admin_toolbar": "8.*",
+        "drupal/admin_toolbar": "~8.1",
+    }
+}
