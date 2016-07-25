@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Adminimal theme.
+ */
+
+use Drupal\Component\Utility\Xss;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ */
+function adwienimal_theme_preprocess_html(&$variables) {
+
+  // Add adminimal class to the body.
+  $variables['attributes']['class'][] = 'adwienimal';
+
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter() for \Drupal\node\NodeForm.
+ *
+ * Changes vertical tabs to container and adds meta information.
+ */
+function adwienimal_theme_form_node_form_alter(&$form, FormStateInterface $form_state) {
+
+  // Move some fields from that damned right column to our always-present meta group.
+  $move = [
+    'path_settings' => 15,
+    'meta' => 20,
+    'author' => 16,
+  ];
+
+  if (!empty($form['#fieldgroups']['group_meta'])) {
+    foreach ($move as $field => $weight) {
+      if (!empty($form[$field])) {
+        unset($form[$field]['#group']);
+        $form[$field]['#weight'] = $weight;
+        $form['#group_children'][$field] = 'group_meta';
+      }
+
+    }
+  }
+}
