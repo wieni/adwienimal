@@ -63,6 +63,10 @@ h3.dammi-title {
     background-image: url(../images/ex.svg);
 }
 
+.dammi-content--upload .ajax-new-content {
+    display: none !important;
+}
+
 .dammi-message {
     margin: 10px 0;
 }
