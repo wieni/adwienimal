@@ -3,7 +3,7 @@
 }
 
 .toolbar-icon-admin-toolbar-tools-help:before {
-    background-image: url(../images/wieni.svg);
+    background-image: url(../images/wieni.svg) !important;
     background-size: 80% !important;
 
     width: 20px !important;
