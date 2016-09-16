@@ -17,3 +17,16 @@
 div[id*="ajax-wrapper"] .messages--error:first-of-type:not(:last-of-type)  {
     display: none;
 }
+
+
+/**
+ *  Fixing the toolbar
+ */
+
+.toolbar-lining {
+    background-color: #ffffff !important;
+}
+
+.toolbar-tray a {
+    color: #565656 !important;
+}
