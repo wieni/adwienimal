@@ -11,7 +11,7 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Implements hook_preprocess_HOOK() for HTML document templates.
  */
-function adwienimal_theme_preprocess_html(&$variables) {
+function adwienimal_preprocess_html(&$variables) {
 
   // Add adminimal class to the body.
   $variables['attributes']['class'][] = 'adwienimal';

@@ -5,5 +5,5 @@ core: 8.x
 base theme: adminimal_theme
 
 libraries:
-  - adwienimal_theme/global-styling
+  - adwienimal/global-styling
 
