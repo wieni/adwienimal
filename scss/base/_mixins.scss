@@ -1,0 +1,99 @@
+@mixin clearfix {
+	&::before,
+	&::after {
+		content: "";
+		display: table;
+	}
+	&::after {
+		clear: both;
+	}
+}
+
+@mixin visually-hidden() {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	overflow: hidden;
+	height: 1px;
+	width: 1px;
+	word-wrap: normal;
+}
+
+@mixin retina-image($name, $w: 0px, $h: 0px, $ext: 'png', $background-position: left top, $background-repeat: no-repeat) {
+	$normal_path: $name + "." + $ext;
+	background-image: url($normal_path);
+	@media #{$retina_display} {
+		$path: $name + "@2x." + $ext;
+		background-image: url($path);
+	}
+	@if $w != 0px and $h != 0px {
+		background-size: $w $h;
+	}
+	background-position: $background-position;
+	background-repeat: $background-repeat;
+}
+
+@mixin placeholder-color($color) {
+	::-webkit-input-placeholder {
+	 color: $color;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+		 color: $color;  
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+		 color: $color;  
+	}
+
+	:-ms-input-placeholder {  
+		 color: $color;  
+	}
+}
+
+@mixin animation-list ($animation, $duration: "1s", $transition: "linear", $delay: "0s", $iteration: "1", $play-state: "running", $direction: "normal") {
+	animation-name: unquote($animation);
+	animation-duration: unquote($duration);
+	animation-timing-function: unquote($transition);
+	animation-delay: unquote($delay);
+	animation-iteration-count: unquote($iteration);
+	animation-direction: unquote($direction);
+	animation-play-state: unquote($play-state);
+}
+
+@mixin flex-align-center($wrap:wrap, $justify-content:center, $align-items:center, $box-pack:center, $box-align:center) {
+	display: flex;
+	align-items: $align-items;
+	justify-content: $justify-content;
+}
+
+@mixin screenwide_bg( $col:none, $padding:0, $left:100%, $right:100% ) {
+	position: relative;
+	padding: $padding;
+	background: $col;
+	&::before,
+	&::after {
+		content: " ";
+		display: block;
+		position: absolute;
+		top: 0;
+		height: 100%;
+		background: inherit;
+	}
+	&::before {
+		left: -$left;
+		width: $left;
+	}
+	&::after {
+		right: -$right;
+		width: $right;
+	}
+}
+
+@mixin invisible_span( $position:relative, $top:-100px ) {
+	position: $position;
+	overflow: hidden;
+	&>span {
+		position: absolute;
+		top: $top;
+	}
+}
