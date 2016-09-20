@@ -1,0 +1,123 @@
+/* ----------------------- TIMING FUNCTIONS ----------------------------- */
+
+$ttf_cubic-bezier: cubic-bezier( 0.22, 1.03, 0.69, 0.97 );
+
+
+
+
+
+
+
+/* ----------------------- ANIMATIONS ----------------------------- */
+
+@keyframes fadein_start {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeout_start {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeout {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes arrow_nudge {
+	0% {
+		margin-right: 0;
+	}
+	40% {
+		margin-right: -2px;
+	}
+	100% {
+		margin-right: 0;
+	}
+}
+
+@keyframes arrow_nudge_left_reverse {
+	0% {
+		margin-left: 0;
+	}
+	40% {
+		margin-left: -2px;
+	}
+	100% {
+		margin-left: 0;
+	}
+}
+
+@keyframes arrow_nudge_left {
+	0% {
+		margin-left: 0;
+	}
+	40% {
+		margin-left: 2px;
+	}
+	100% {
+		margin-left: 0;
+	}
+}
+
+@keyframes arrow_nudge_down {
+	0% {
+		margin-top: 0;
+	}
+	40% {
+		margin-top: 2px;
+	}
+	100% {
+		margin-top: 0;
+	}
+}
+
+@keyframes loading_spinner {
+	0% {
+		transform: rotate( 0deg );
+	}
+	100% {
+		transform: rotate( 360deg );
+	}
+}
+
+@keyframes scale_bob {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+
+
+
+
+

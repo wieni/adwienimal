@@ -17,29 +17,3 @@ function adwienimal_theme_preprocess_html(&$variables) {
   $variables['attributes']['class'][] = 'adwienimal';
 
 }
-
-/**
- * Implements hook_form_BASE_FORM_ID_alter() for \Drupal\node\NodeForm.
- *
- * Changes vertical tabs to container and adds meta information.
- */
-function adwienimal_theme_form_node_form_alter(&$form, FormStateInterface $form_state) {
-
-  // Move some fields from that damned right column to our always-present meta group.
-  $move = [
-    'path_settings' => 15,
-    'meta' => 20,
-    'author' => 16,
-  ];
-
-  if (!empty($form['#fieldgroups']['group_meta'])) {
-    foreach ($move as $field => $weight) {
-      if (!empty($form[$field])) {
-        unset($form[$field]['#group']);
-        $form[$field]['#weight'] = $weight;
-        $form['#group_children'][$field] = 'group_meta';
-      }
-
-    }
-  }
-}

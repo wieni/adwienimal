@@ -1,0 +1,371 @@
+/*
+ * LAYOUT CSS
+ */
+
+#toolbar-administration {
+	font-size: 12px;
+	
+	@media screen and (min-width: $desk-min-width) {
+		background: #000;
+	}
+	
+	
+	@media screen and (min-width: $desk-max-width) {
+		font-size: 13px;
+	}
+}
+
+body.toolbar-tray-open.toolbar-fixed {
+	&.toolbar-vertical {
+		@media screen and (min-width: $tab-min-width) {
+			margin-left: 0;
+		}
+		
+		
+		@media screen and (min-width: $desk-min-width) {
+			margin-left: 240px;
+		}
+	}
+}
+
+.toolbar {
+	.toolbar-tray-horizontal,
+	.toolbar-tray-vertical {
+		box-shadow: none;
+	}
+	.toolbar-icon {
+		&::before {
+			transition: none;
+		}
+	}
+}
+
+.adminimal-admin-toolbar {
+	&.toolbar-fixed {
+		&.toolbar-vertical {
+			padding-top: 0 !important;
+			@media screen and (min-width: $desk-min-width) {
+				padding-top: 36px !important;
+			}
+		}
+	}
+	.toolbar {
+		a {
+			transition: none;
+		}
+		.toolbar-bar {
+			&,
+			.toolbar-tab>.toolbar-item.is-active,
+			.toolbar-tab>.toolbar-item:focus {
+				background: #000;
+			}
+		}
+		.toolbar-tray,
+		.menu-item--expanded,
+		.toolbar-toggle-orientation,
+		.toolbar-menu {
+			background: #000;
+			a {
+				color: #fff;
+			}
+		}
+		.toolbar-menu {
+			.toolbar-menu {
+				a {
+					color: #fff;
+				}
+			}
+			ul {
+				.toolbar-icon {
+					padding: 10px;
+				}
+			}
+		}
+		.toolbar-tray-horizontal {
+			border-bottom: solid 1px #000;
+			ul {
+				li.menu-item--expanded {
+					ul {
+						font-size: 12px;
+					}
+					.menu-item:hover ul {
+						margin-top: -32px;
+					}
+				}
+				ul {
+					li.menu-item {
+						background: #000;
+						&:first-child {
+							border-top: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	
+	@media screen and (min-width: $desk-max-width) {
+		.toolbar {
+			.toolbar-tray-horizontal {
+				ul {
+					li.menu-item--expanded {
+						ul {
+							font-size: 13px;
+						}
+						.menu-item:hover ul {
+							margin-top: -33px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.toolbar-tray-horizontal {
+	.toolbar-menu-administration {
+		&>.toolbar-menu {
+			@media screen and (min-width: $desk-min-width) {
+				display: flex;
+			}
+		}
+	}
+}
+
+.toolbar-icon {
+	&[data-drupal-link-system-path="<front>"] {
+		&::before {
+			background-image: url("../img/ffffff/logo_joker.svg") !important;
+			width: 42px !important;
+			margin-left: -5px;
+		}
+	}
+	&[data-drupal-link-system-path="admin/subcontent"] {
+		&::before {
+			background-image: url("../img/787878/file.svg");
+		}
+		&:hover {
+			&::before {
+				background-image: url("../img/ffffff/file.svg");
+			}
+		}
+	}
+}
+
+.toolbar .toolbar-tray-vertical .toolbar-menu {
+	a {
+		&[data-drupal-link-system-path="<front>"] {
+			padding-left: 40px;
+			&::before {
+				margin-left: -10px;
+			}
+		}
+	}
+}
+
+
+
+
+.js .form-actions .dropbutton .dropbutton-action > a {
+	color: $col_text;
+}
+
+.dropbutton-multiple {
+	.dropbutton {
+		li {
+			&.button {
+				padding: 0;
+				font-size: 13px;
+			}
+		}
+		&[data-drupal-selector="edit-add-new"] {
+			padding-top: 20px;
+			background: $col_background;
+			margin: -1px;
+			margin-right: calc(-2em - 1px);
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			overflow: visible;
+			li {
+				margin-bottom: 10px;
+				&:not(:last-of-type) {
+					margin-right: 10px;
+				}
+				a {
+					box-sizing: border-box;
+					border: solid 1px $col_grey;
+					background: $col_verylightgrey;
+					padding: 4px 15px;
+					&:hover,
+					&:focus {
+						border-color: $col_blue;
+						background: #fff;
+					}
+					&:focus {
+						box-shadow: none;
+						outline: $col_verylightblue solid 2px;
+						text-decoration: none;
+					}
+				}
+			}
+			.dropbutton-toggle {
+				display: none;
+			}
+			.secondary-action {
+				display: block;
+				border: none;
+			}
+		}
+	}
+}
+
+.form-actions {
+	.dropbutton-wrapper {
+		&.dropbutton-single {
+			margin-right: 15px;
+		}
+	}
+	
+	
+	@media screen and (min-width: $tab-min-width) {
+		.dropbutton-wrapper {
+			float: none;
+			display: inline-block;
+			vertical-align: top;
+		}
+		#edit-submit {
+			+ .dropbutton-wrapper {
+				display: block;
+			}
+		}
+	}
+}
+
+
+
+.node-group-travel-edit-form {
+	.layout-region-node-main {
+		position: relative;
+		.right {
+			margin-top: 20px;
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+		}
+		
+		
+		@media screen and (min-width: $tab-min-width) {
+			width: 100%;
+			padding-right: 0;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			.field-group-tabs-wrapper,
+			.entity-meta,
+			.entity-meta__header,
+			#edit-simple-sitemap {
+				box-sizing: border-box;
+				width: 60%;
+			}
+			.field-group-tabs-wrapper {
+				order: 1;
+				margin-right: auto;
+			}
+			.entity-meta {
+				order: 3;
+			}
+			.right {
+				width: calc(40% - 20px);
+				margin-top: 0;
+				order: 2;
+			}
+			.entity-meta__header {
+				order: 4;
+			}
+			#edit-simple-sitemap {
+				order: 5;
+			}
+		}
+		
+		
+		@media screen and (min-width: $desk-min-width) {
+			.field-group-tabs-wrapper,
+			.entity-meta,
+			.entity-meta__header,
+			#edit-simple-sitemap {
+				width: calc(100% - 320px);
+			}
+			.right {
+				width: 300px;
+			}
+		}
+	}
+}
+
+
+
+.draggable {
+	&>td {
+		position: relative;
+	}
+	.tabledrag-changed {
+		margin-left: 40px;
+	}
+}
+
+.tabledrag-changed {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -8px;
+	background: $col_links;
+	color: #fff;
+	font-size: 0;
+	z-index: 2;
+	border-radius: 50%;
+	pointer-events: none;
+	&,
+	&::after {
+		width: 16px;
+		height: 16px;
+		line-height: 16px;
+		text-align: center;
+	}
+	&::after {
+		position: absolute;
+		left: 0;
+		top: 0;
+		content: "!";
+		font-family: $ff1;
+		font-size: 14px;
+		font-weight: 600;
+	}
+	@include animation-list( "scale_bob", "0.5s", $ttf_cubic-bezier, "0s", "infinite" );
+}
+
+.adminimal .messages {
+	&.tabledrag-changed-warning {
+		position: fixed;
+		right: 10px;
+		bottom: 10px;
+		display: inline-block;
+		background: #fff;
+		margin: 0;
+		border-width: 1px;
+		z-index: 1;
+		.tabledrag-changed {
+			margin-left: 10px;
+		}
+	}
+}
+
+
+
+
+
+
