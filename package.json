@@ -1,0 +1,25 @@
+{
+  "name": "adwienimal",
+  "version": "1.0.0",
+  "description": "Adwienimal, drupal backend theme",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp compile-styles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wieni/adwienimal.git"
+  },
+  "author": "Wieni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wieni/adwienimal/issues"
+  },
+  "homepage": "https://github.com/wieni/adwienimal#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2"
+  }
+}
