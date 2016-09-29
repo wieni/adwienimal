@@ -133,37 +133,6 @@ body.toolbar-tray-open.toolbar-fixed {
 	}
 }
 
-.toolbar-icon {
-	&[data-drupal-link-system-path="<front>"] {
-		&::before {
-			background-image: url("../img/ffffff/logo_joker.svg") !important;
-			width: 42px !important;
-			margin-left: -5px;
-		}
-	}
-	&[data-drupal-link-system-path="admin/subcontent"] {
-		&::before {
-			background-image: url("../img/787878/file.svg");
-		}
-		&:hover {
-			&::before {
-				background-image: url("../img/ffffff/file.svg");
-			}
-		}
-	}
-}
-
-.toolbar .toolbar-tray-vertical .toolbar-menu {
-	a {
-		&[data-drupal-link-system-path="<front>"] {
-			padding-left: 40px;
-			&::before {
-				margin-left: -10px;
-			}
-		}
-	}
-}
-
 
 
 
