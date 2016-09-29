@@ -2,4 +2,4 @@ global-styling:
   version: VERSION
   css:
     theme:
-      css/adwienimal-custom.min.css: {}
+      css/adwienimal.min.css: {}

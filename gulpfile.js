@@ -10,9 +10,9 @@ var sass = require('gulp-sass');
  */
 
 gulp.task('compile-styles', function () {
-    gulp.src('scss/adwienimal-custom.scss')
+    gulp.src('scss/adwienimal.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(minify({processImport: false}))
-        .pipe(rename('adwienimal-custom.min.css'))
+        .pipe(rename('adwienimal.min.css'))
         .pipe(gulp.dest('css'));
 });
