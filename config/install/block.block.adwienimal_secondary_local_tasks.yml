@@ -3,17 +3,17 @@ status: true
 dependencies:
   theme:
     - adminimal_theme
-id: adwienimal_theme_primary_local_tasks
-theme: adwienimal_theme
-region: header
+id: adwienimal_secondary_local_tasks
+theme: adwienimal
+region: pre_content
 weight: 0
 provider: null
 plugin: local_tasks_block
 settings:
   id: local_tasks_block
-  label: 'Primary tabs'
+  label: 'Secondary tabs'
   provider: core
   label_display: '0'
-  primary: true
-  secondary: false
+  primary: false
+  secondary: true
 visibility: {  }
