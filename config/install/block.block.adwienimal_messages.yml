@@ -5,15 +5,15 @@ dependencies:
     - system
   theme:
     - adminimal_theme
-id: adwienimal_theme_breadcrumbs
-theme: adwienimal_theme
-region: breadcrumb
+id: adwienimal_messages
+theme: adwienimal
+region: highlighted
 weight: 0
 provider: null
-plugin: system_breadcrumb_block
+plugin: system_messages_block
 settings:
-  id: system_breadcrumb_block
-  label: Breadcrumbs
+  id: system_messages_block
+  label: 'Status messages'
   provider: system
   label_display: '0'
 visibility: {  }
