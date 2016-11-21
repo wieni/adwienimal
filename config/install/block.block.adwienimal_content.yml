@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - adminimal_theme
-id: adwienimal_theme_content
-theme: adwienimal_theme
+    - adwienimal
+id: adwienimal_content
+theme: adwienimal
 region: content
 weight: 0
 provider: null
