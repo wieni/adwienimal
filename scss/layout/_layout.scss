@@ -43,12 +43,12 @@ div[id*="ajax-wrapper"] .messages--error:first-of-type:not(:last-of-type)  {
 
 #toolbar-administration {
 	font-size: 12px;
-	
+
 	@media screen and (min-width: $desk-min-width) {
 		background: #000;
 	}
-	
-	
+
+
 	@media screen and (min-width: $desk-max-width) {
 		font-size: 13px;
 	}
@@ -59,8 +59,8 @@ body.toolbar-tray-open.toolbar-fixed {
 		@media screen and (min-width: $tab-min-width) {
 			margin-left: 0;
 		}
-		
-		
+
+
 		@media screen and (min-width: $desk-min-width) {
 			margin-left: 240px;
 		}
@@ -142,8 +142,8 @@ body.toolbar-tray-open.toolbar-fixed {
 			}
 		}
 	}
-	
-	
+
+
 	@media screen and (min-width: $desk-max-width) {
 		.toolbar {
 			.toolbar-tray-horizontal {
@@ -235,8 +235,8 @@ body.toolbar-tray-open.toolbar-fixed {
 			margin-right: 15px;
 		}
 	}
-	
-	
+
+
 	@media screen and (min-width: $tab-min-width) {
 		.dropbutton-wrapper {
 			float: none;
@@ -264,8 +264,8 @@ body.toolbar-tray-open.toolbar-fixed {
 				height: auto;
 			}
 		}
-		
-		
+
+
 		@media screen and (min-width: $tab-min-width) {
 			width: 100%;
 			padding-right: 0;
@@ -298,8 +298,8 @@ body.toolbar-tray-open.toolbar-fixed {
 				order: 5;
 			}
 		}
-		
-		
+
+
 		@media screen and (min-width: $desk-min-width) {
 			.field-group-tabs-wrapper,
 			.entity-meta,
@@ -372,6 +372,15 @@ body.toolbar-tray-open.toolbar-fixed {
 	}
 }
 
+/**
+ *  Node form fullwidth pls!
+ */
+
+.layout-region-node-main,
+.layout-region-node-footer {
+    width: 100% !important;
+    padding-right: 0 !important;
+}
 
 
 
